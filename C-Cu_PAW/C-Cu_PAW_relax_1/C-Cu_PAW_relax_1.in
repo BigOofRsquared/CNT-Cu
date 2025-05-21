@@ -1,0 +1,43 @@
+!relax calculation for C-Cu dimer, performed by PW basis, PAW potential
+
+&CONTROL
+  calculation = 'relax',                  !atomic structure can be relaxed mantaining
+                                          !the cell fixed
+  prefix = 'C-Cu_dimer',
+  outdir = './C-Cu_dimer/',
+  pseudo_dir = '../../../QE/q-e/pseudo/',    !pseudo potentials directory
+  tprnfor = .true.,                       !prints forces for each atom
+  tstress = .true.                        !prints stress tensor
+/
+
+&SYSTEM
+  ibrav = 1,                  !simple cubic
+  celldm(1) = 30,             !cell size in Bohr
+  nat = 2,                    !total atoms
+  ntyp = 2,                   !atomic species
+  ecutwfc = 50.0,             !energy cutoff for pw wf basis
+  ecutrho = 400.0,            !energy cutoff for pw density expansion
+  occupations = 'smearing',   !soften the occupations
+  smearing = 'mp',
+  degauss = 0.01,
+/
+
+&ELECTRONS
+  conv_thr = 1.0d-6,      !energy tollerance
+  mixing_beta = 0.3,      !density mixing ratio (slower, more stable convergence)
+/
+
+&IONS
+  ion_dynamics = 'bfgs'     !relaxing alg
+/
+
+ATOMIC_SPECIES
+  Cu  63.546  Cu.pbe-kjpaw.UPF
+  C   12.011  C.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {bohr}
+  C   15.  15.  13.5
+  Cu  15.  15.  16.5
+
+K_POINTS automatic
+1 1 1  0 0 0            !just k=0

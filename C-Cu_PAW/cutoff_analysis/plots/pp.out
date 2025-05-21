@@ -1,0 +1,53 @@
+
+     Program POST-PROC v.7.0 starts on 21May2025 at 19:24:42 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Serial version
+     1047 MiB available memory on the printing compute node when the environment starts
+
+
+     Reading xml data from directory:
+
+     ../Cu-C_PAW_scf_ecut_80_Ry/C-Cu_dimer.save/
+     file C.pbe-n-kjpaw_psl.1.0.0.UPF: wavefunction(s)  2S 2P renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum       11449    5721   1433               922329   326029   40651
+
+     Using Slab Decomposition
+
+
+     negative rho (up, down):  2.557E-04 0.000E+00
+
+     Calling punch_plot, plot_num =   0
+     Writing data to file  density_to_be_plotted_80_Ry
+     Reading data from file  density_to_be_plotted_80_Ry
+
+     Writing data to be plotted to file density_to_be_plotted_80_Ry.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+
+     POST-PROC    :     10.97s CPU     14.98s WALL
+
+
+   This run was terminated on:  19:24:57  21May2025            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

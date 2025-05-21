@@ -1,0 +1,38 @@
+!scf calculation for C-Cu dimer, performed by PW basis, PAW potential. Already relaxed
+
+&CONTROL
+  calculation = 'scf',
+  prefix = 'C-Cu_dimer',
+  outdir = 'Cu-C_PAW_scf_ecut_20_Ry',
+  pseudo_dir = '../../QE/q-e/pseudo/',
+  tprnfor = .true.,
+  tstress = .true.
+/
+
+&SYSTEM
+  ibrav = 1,
+  celldm(1) = 15,
+  nat = 2,
+  ntyp = 2,
+  ecutwfc = 20
+  ecutrho = 160
+  occupations = 'smearing',
+  smearing = 'mp',
+  degauss = 0.01,
+/
+
+&ELECTRONS
+  conv_thr = 1.0d-6,
+  mixing_beta = 0.5,
+/
+
+ATOMIC_SPECIES
+  Cu  63.546  Cu.pbe-kjpaw.UPF
+  C   12.011  C.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS {bohr}         !from a relax calculation
+  C            7.5       7.5       9.1783631981
+  Cu           7.5       7.5       5.8216368019
+
+K_POINTS automatic
+1 1 1  0 0 0

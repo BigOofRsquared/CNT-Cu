@@ -1,0 +1,12 @@
+&INPUTPP
+  prefix = 'C-Cu_dimer',
+  outdir = '../Cu-C_PAW_scf_ecut_80_Ry',
+  filplot = 'density_to_be_plotted_80_Ry',
+  plot_num = 0
+/
+&PLOT
+  nfile = 1,
+  fileout = 'density_to_be_plotted_80_Ry.cube',
+  iflag = 3,
+  output_format = 6
+/
